@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baigents</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+
+  <nav class="main-nav">
+    <div class="nav-wrapper">
+        <%= image_tag("logo-baigents.jpg", alt: "logo", class: "logo" )%>
+
+      <ul class="right  hide-on-med-and-down  caps  t-light">
+        <li><%= link_to 'Home', '.html' %></li>
+        <li><%= link_to 'About', '.html' %></li>
+        <li><%= link_to 'Contact', '.html' %></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><%= link_to 'Login', '.html' %></li>
+      </ul>
+    </div>
+  </nav>
+
+  <%= yield %>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col  s12  center">
+
+          <p>Baigents Pty. Ltd.</p>
+
+          <p><span class="t-bold">Head office</span> 65 Kooyong Rd,<br>
+          Caulfield North, Victoria 3144</p>
+
+          <p><span class="t-bold">Phone</span> +61 (3) 9509 5800<br>
+          <strong>Fax</strong> +61 (3) 9509 5088</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col  s12  center">
+          <%= link_to 'Email us', 'mailto: ', class: 'btn-large  btn-red  waves-effect  waves-light' %>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+</body>
+</html>

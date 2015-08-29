@@ -1,0 +1,57 @@
+<%= form_for :user, url: users_path do |u| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.text_field :first_name %>
+      <%= u.label :first_name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.text_field :last_name %>
+      <%= u.label :last_name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.email_field :email %>
+      <%= u.label :email %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Full-time</option>
+        <option value="2">Part-time</option>
+        <option value="3">Contractor</option>
+        <option value="4">Casual</option>
+      </select>
+      <label>Role</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= u.submit %>
+    </div>
+  </div>
+
+<% end %>

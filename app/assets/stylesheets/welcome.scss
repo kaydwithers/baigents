@@ -1,0 +1,89 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  color: #666;
+}
+
+nav {
+  height: 80px !important;
+  line-height: 80px !important;
+  background-color: rgba(255,255,255,0);
+}
+
+.main-nav {
+  background: -moz-linear-gradient(top, rgba(35, 46, 59, 0.95) 0%, rgba(46, 49, 55, 0.95) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(35, 46, 59, 0.95)), color-stop(100%, rgba(46, 49, 55, 0.95)));
+  background: -webkit-linear-gradient(top, rgba(35, 46, 59, 0.95) 0%, rgba(46, 49, 55, 0.95) 100%);
+  background: -o-linear-gradient(top, rgba(35, 46, 59, 0.95) 0%, rgba(46, 49, 55, 0.95) 100%);
+  background: -ms-linear-gradient(top, rgba(35, 46, 59, 0.95) 0%, rgba(46, 49, 55, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(35, 46, 59, 0.95) 0%, rgba(46, 49, 55, 0.95) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9232e3b', endColorstr='#d9303d4e',GradientType=0 );
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0 3rem;
+
+  a {
+    color: #AAAAAA;
+  }
+  li {
+    letter-spacing: 1px;
+  }
+  img {
+    padding: 14px 0 0;
+  }
+}
+
+.nav-wrapper {
+
+}
+
+.hero {
+  padding: 13rem 0 9rem 0;
+  background: image-url('chadstone-roof.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+footer {
+  background-color: #111;
+  padding: 7rem 0;
+
+  p {
+    color: #888;
+  }
+}
+
+.btn-red {
+  background-color: #D02E2E !important;
+}
+
+.btn, .btn-large, .btn-flat {
+  border-radius: 0 !important;
+}
+
+// Typography
+
+.caps {
+  text-transform: uppercase;
+}
+
+.t-light {
+  font-weight: 300;
+}
+
+.t-semibold {
+  font-weight: 600;
+}
+
+.t-bold {
+  font-weight: 700;
+}
