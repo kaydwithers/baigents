@@ -37,14 +37,36 @@
 
   <div class="row">
     <div class="input-field  col  s12">
-      <select>
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">Full-time</option>
-        <option value="2">Part-time</option>
-        <option value="3">Contractor</option>
-        <option value="4">Casual</option>
-      </select>
-      <label>Role</label>
+      <%= u.telephone_field :phone %>
+      <%= u.label :phone %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.telephone_field :mobile %>
+      <%= u.label :mobile %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.check_box(:timesheet_done) %>
+      <%= u.label :timesheet_done %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.select(:employment_type, options_for_select([['Full-time', 1], ['Part-time', 2], ['Contractor', 3], ['Casual', 4]], 2)) %>
+      <%= u.label :employment_type %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field  col  s12">
+      <%= u.select(:office_location, options_for_select([['Upstairs', 1], ['Downstairs', 2], ['Basement', 3]], 2)) %>
+      <%= u.label :office_location %>
     </div>
   </div>
 

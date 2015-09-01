@@ -11,14 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828011331) do
+ActiveRecord::Schema.define(version: 20150901094246) do
+
+  create_table "employment_types", force: :cascade do |t|
+    t.integer  "employment_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "empoymenttypes", force: :cascade do |t|
+    t.boolean  "employment_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "office_locations", force: :cascade do |t|
+    t.integer  "office_location"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "phone"
+    t.string   "mobile"
+    t.string   "employment_type"
+    t.string   "office_location"
+    t.boolean  "timesheet_done"
   end
 
 end

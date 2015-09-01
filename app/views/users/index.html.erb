@@ -1,14 +1,26 @@
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col  s12">
+        <h3>Users</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col  s12">
-      <h3>Users</h3>
-
       <%= link_to 'Add user'.html_safe, new_user_path, class: 'btn-large  green  waves-effect  waves-light' %>
-
       <table class="bordered  responsive-table">
         <tr>
+          <th></th>
           <th>Name</th>
           <th>Email</th>
+          <th>Phone</th>
+          <th>Mobile</th>
+          <th>Type</th>
+          <th>Location</th>
           <th></th>
           <th></th>
           <th></th>
@@ -16,11 +28,17 @@
 
         <% @users.each do |user| %>
           <tr>
+            <td><%= check_box_tag(:timesheet_done) %></td>
+            <td><input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" /></td>
             <td><%= user.first_name + ' ' + user.last_name %></td>
             <td><%= user.email %></td>
-            <td><%= link_to '<i class="material-icons">visibility</i>'.html_safe, user_path(user) %></td>
-            <td><%= link_to '<i class="material-icons">edit</i>'.html_safe, edit_user_path(user) %></td>
-            <td><%= link_to '<i class="material-icons">delete</i>'.html_safe, user_path(user),
+            <td><%= user.phone %></td>
+            <td><%= user.mobile %></td>
+            <td><%= user.employment_type %></td>
+            <td><%= user.office_location %></td>
+            <td><%= link_to '<i class="material-icons  grey-text  text-darken-3">visibility</i>'.html_safe, user_path(user) %></td>
+            <td><%= link_to '<i class="material-icons  grey-text  text-darken-3">edit</i>'.html_safe, edit_user_path(user) %></td>
+            <td><%= link_to '<i class="material-icons  grey-text  text-darken-3">delete</i>'.html_safe, user_path(user),
                     method: :delete,
                     data: { confirm: 'Are you sure?' } %></td>
           </tr>

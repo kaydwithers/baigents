@@ -2,18 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: 'MuseoSans100'; src: url('MuseoSans-100.eot?#iefix') format('embedded-opentype'),  url('MuseoSans-100.otf')  format('opentype'), url('MuseoSans-100.woff') format('woff'), url('MuseoSans-100.ttf')  format('truetype'), url('MuseoSans-100.svg#MuseoSans-100') format('svg'); 
+  font-weight: normal; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans300'; src: url('MuseoSans-300.eot?#iefix') format('embedded-opentype'),  url('MuseoSans-300.otf')  format('opentype'), url('MuseoSans-300.woff') format('woff'), url('MuseoSans-300.ttf')  format('truetype'), url('MuseoSans-300.svg#MuseoSans-300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova'; src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),  url('ProximaNova-Regular.otf')  format('opentype'), url('ProximaNova-Regular.woff') format('woff'), url('ProximaNova-Regular.ttf')  format('truetype'), url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font: 1em/1.5em "ProximaNovaRegular", sans-serif;
+  background: #FAFAFA;
+  color: #222222;
 }
 
 p {
+  font: 1em/1.5em 'ProximaNova', sans-serif;
   color: #666;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'MuseoSans300', sans-serif;
 }
 
 nav {
   height: 80px !important;
   line-height: 80px !important;
   background-color: rgba(255,255,255,0);
+
+  li a {
+    font-family: 'MuseoSans300', sans-serif;
+    font-size: 1rem;
+  }
 }
 
 .main-nav {
@@ -48,9 +78,42 @@ nav {
 }
 
 .hero {
-  padding: 13rem 0 9rem 0;
-  background: image-url('chadstone-roof.jpg') center center no-repeat;
+  padding: 16rem 0 12rem 0;
+  background: image-url('slide-chadstone2.jpg') center center no-repeat;
   background-size: cover;
+}
+
+.intro {
+  background: #E9E9E9;
+
+  h4 {
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    font: 1.7em/1.5em "MuseoSans100";
+  }
+}
+
+.content {
+  padding: 6rem 0;
+}
+
+.card {
+  border-radius: 0;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: rgba(255,255,255,0) !important;
+  transition: all 0.1s ease;
+
+  h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font: 1.125em/1.5em "MuseoSans300", sans-serif;
+  }
+}
+
+.card-content {
+  padding: 20px 0 !important;
 }
 
 footer {
@@ -70,7 +133,34 @@ footer {
   border-radius: 0 !important;
 }
 
+.header {
+  padding: 9rem 0 3rem;
+  background-color: #E9E9E9;
+
+  h3 {
+    font: 2.7em/1.5em 'MuseoSans100';
+    color: rgba(31, 31, 31, 0.9);
+  }
+}
+
+
 // Typography
+
+.label {
+  text-align: center;
+  position: relative;
+  top: -40px;
+
+  h3 {
+    background: none repeat scroll 0 0 #111;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
 
 .caps {
   text-transform: uppercase;
